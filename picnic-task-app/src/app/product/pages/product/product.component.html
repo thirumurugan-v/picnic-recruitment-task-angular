@@ -1,0 +1,17 @@
+<div *ngIf='product != undefined'>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Product Name: {{product.name}}</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="product-details">
+    <img [src]="product.imageURL">
+    <mat-card-content>
+      <p>Description: {{product.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Buy for $ {{product.price}}</button>
+    </mat-card-actions>
+  </div>
+</div>

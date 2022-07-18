@@ -1,0 +1,27 @@
+.product-card{
+  width: fit-content;
+  background-color: #d4d4d4;
+  cursor: pointer;
+}
+.product-card .product-price{
+  text-align: end;
+}
+.product-card mat-card-content{
+  display: flex;
+}
+
+.product-card img{
+  height: 150px;
+  width: 150px;
+}
+
+.product-card mat-card-title{
+  margin-top: 0;
+  width: 50%;
+}
+
+:host ::ng-deep mat-form-field.search-text-box {
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 2%;
+}

@@ -1,0 +1,11 @@
+<div *ngIf='product != undefined'>
+<h2 mat-dialog-title>Product Name: {{product.name}}</h2>
+<mat-dialog-content class="mat-typography">
+  <img [src]="product.imageURL">
+  <h3>Description: {{product.description}}</h3>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Buy for $ {{product.price}}</button>
+</mat-dialog-actions>
+</div>

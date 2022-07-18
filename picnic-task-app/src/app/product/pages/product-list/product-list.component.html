@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Groceries List</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<search-product></search-product>
+
+<div class="product-grid">
+  <mat-grid-list [cols]="noOfColumnsForProductList">
+    <mat-grid-tile *ngFor="let product of productList">
+      <mat-card class="product-card" (click)="showProductDetails(product.id)">
+        <img  [src]="product.imageURL">
+        <mat-card-content>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-title class="product-price">${{product.price}}</mat-card-title>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
